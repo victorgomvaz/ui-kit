@@ -106,19 +106,26 @@ describe('Tooltip', () => {
     expect(screen.queryByRole('tooltip')).not.toBeInTheDocument();
   });
 
-  it('applies position classes', () => {
+  it('applies position classes', async () => {
+    const user = userEvent.setup();
     const { rerender } = render(
       <Tooltip content="Test" position="top">
         <button>Trigger</button>
       </Tooltip>
     );
+    
+    const trigger = screen.getByText('Trigger');
+    await user.hover(trigger);
     expect(document.querySelector('.tooltip--top')).toBeInTheDocument();
 
+    await user.unhover(trigger);
     rerender(
       <Tooltip content="Test" position="bottom">
         <button>Trigger</button>
       </Tooltip>
     );
+    
+    await user.hover(trigger);
     expect(document.querySelector('.tooltip--bottom')).toBeInTheDocument();
   });
 

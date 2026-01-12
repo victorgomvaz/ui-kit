@@ -27,6 +27,9 @@
   ],
   "author": "Langifi Developer langifi.developer@gmail.com",
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "peerDependencies": {
     "react": ">=18.0.0",
     "react-dom": ">=18.0.0"
