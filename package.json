@@ -14,6 +14,7 @@
     "dev": "rollup -c -w",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
+    "deploy-storybook": "gh-pages -d storybook-static",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage"

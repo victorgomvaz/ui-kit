@@ -13,6 +13,12 @@ const config = {
   docs: {
     autodocs: 'tag',
   },
+  // Configuración para GitHub Pages
+  // La ruta base se configura automáticamente en el workflow de GitHub Actions
+  // mediante la variable de entorno STORYBOOK_BASE_PATH
+  ...(process.env.STORYBOOK_BASE_PATH && {
+    base: process.env.STORYBOOK_BASE_PATH,
+  }),
   webpackFinal: async (config) => {
     // Find and modify the existing CSS rule to exclude CSS Modules
     const rules = config.module.rules;

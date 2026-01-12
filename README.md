@@ -11,19 +11,24 @@ A consistent, accessible, and scalable React UI component library built with CSS
 - 📚 **Documented**: Storybook stories for all components
 - ✅ **Tested**: Comprehensive test coverage with accessibility checks
 
+## 📖 Documentation
+
+View the full component documentation and interactive examples on [GitHub Pages](https://victorgomvaz.github.io/ui-kit/).
+
 ## Installation
 
 ```bash
-yarn add @ui-kit/components
+yarn add @langifi.developer/ui-kit
 ```
 
 ## Usage
 
 ```jsx
-import { Button } from '@ui-kit/components';
+import { Button } from '@langifi.developer/ui-kit';
+import '@langifi.developer/ui-kit/dist/index.css';
 
 function App() {
-  return <Button variant="primary" size="medium">Click me</Button>;
+  return <Button variant="primary" size="md">Click me</Button>;
 }
 ```
 
@@ -57,3 +62,9 @@ yarn test
 - Badge
 - Avatar
 - Spinner
+
+## Deployment
+
+This project is automatically deployed to GitHub Pages on every push to the main branch. The Storybook documentation is available at:
+
+`https://[your-username].github.io/[repo-name]/`
