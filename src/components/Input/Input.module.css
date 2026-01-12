@@ -1,0 +1,115 @@
+@import '../../tokens/index.css';
+
+.input__container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-1);
+  width: 100%;
+}
+
+.input__label {
+  display: block;
+  font-size: var(--typography-label-font-size);
+  font-weight: var(--typography-label-font-weight);
+  line-height: var(--typography-label-line-height);
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-1);
+}
+
+.input__required {
+  color: var(--color-error-600);
+  margin-left: var(--spacing-1);
+}
+
+.input__wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input {
+  width: 100%;
+  padding: var(--spacing-input-padding-y) var(--spacing-input-padding-x);
+  font-size: var(--typography-input-font-size);
+  line-height: var(--typography-input-line-height);
+  font-family: var(--font-family-sans);
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-primary);
+  border: var(--border-width-default) solid var(--color-border-default);
+  border-radius: var(--border-radius-input);
+  transition: var(--transition-input);
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.input::placeholder {
+  color: var(--color-text-tertiary);
+  opacity: 1;
+}
+
+.input:hover:not(:disabled):not(.input--disabled) {
+  border-color: var(--color-neutral-400);
+}
+
+.input:focus {
+  border-color: var(--color-border-focus);
+  box-shadow: var(--shadow-focus);
+}
+
+.input:disabled,
+.input--disabled {
+  background-color: var(--color-disabled-bg);
+  color: var(--color-disabled-text);
+  border-color: var(--color-disabled-border);
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.input--error {
+  border-color: var(--color-border-error);
+}
+
+.input--error:focus {
+  border-color: var(--color-border-error);
+  box-shadow: var(--shadow-focus-error);
+}
+
+.input__wrapper--error .input {
+  border-color: var(--color-border-error);
+}
+
+/* Size Variants */
+.input--sm {
+  padding: calc(var(--spacing-input-padding-y) * 0.75) calc(var(--spacing-input-padding-x) * 0.875);
+  font-size: var(--font-size-sm);
+  min-height: 32px;
+}
+
+.input--md {
+  padding: var(--spacing-input-padding-y) var(--spacing-input-padding-x);
+  font-size: var(--typography-input-font-size);
+  min-height: 40px;
+}
+
+.input--lg {
+  padding: calc(var(--spacing-input-padding-y) * 1.25) calc(var(--spacing-input-padding-x) * 1.25);
+  font-size: var(--font-size-lg);
+  min-height: 48px;
+}
+
+.input__error {
+  font-size: var(--font-size-sm);
+  color: var(--color-error-600);
+  margin-top: var(--spacing-1);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-1);
+}
+
+.input__helper {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  margin-top: var(--spacing-1);
+}

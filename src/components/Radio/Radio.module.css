@@ -1,0 +1,100 @@
+@import '../../tokens/index.css';
+
+.radio {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: var(--spacing-2);
+  cursor: pointer;
+  user-select: none;
+}
+
+.radio--disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.radio__input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.radio__label {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  cursor: pointer;
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-normal);
+  color: var(--color-text-primary);
+}
+
+.radio--disabled .radio__label {
+  cursor: not-allowed;
+}
+
+.radio__circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  border: var(--border-width-default) solid var(--color-border-default);
+  border-radius: var(--radius-full);
+  background-color: var(--color-bg-primary);
+  transition: var(--transition-base);
+  position: relative;
+}
+
+.radio__input:focus-visible + .radio__label .radio__circle {
+  outline: none;
+  box-shadow: var(--shadow-focus);
+  border-color: var(--color-border-focus);
+}
+
+.radio__input:checked + .radio__label .radio__circle {
+  border-color: var(--color-primary-600);
+}
+
+.radio__input:hover:not(:disabled):not(:checked) + .radio__label .radio__circle {
+  border-color: var(--color-neutral-400);
+  background-color: var(--color-neutral-50);
+}
+
+.radio__input:disabled + .radio__label .radio__circle,
+.radio--disabled .radio__circle {
+  background-color: var(--color-disabled-bg);
+  border-color: var(--color-disabled-border);
+  cursor: not-allowed;
+}
+
+.radio__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-primary-600);
+  opacity: 0;
+  transform: scale(0);
+  transition: var(--transition-fast);
+}
+
+.radio__input:checked + .radio__label .radio__dot {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.radio__input:disabled + .radio__label .radio__dot,
+.radio--disabled .radio__dot {
+  background-color: var(--color-disabled-text);
+}
+
+.radio__text {
+  line-height: var(--line-height-normal);
+}

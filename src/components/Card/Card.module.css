@@ -1,0 +1,75 @@
+@import '../../tokens/index.css';
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-bg-primary);
+  border-radius: var(--border-radius-card);
+  overflow: hidden;
+  transition: var(--transition-base);
+}
+
+/* Variant: Default */
+.card--default {
+  border: var(--border-width-default) solid var(--color-border-default);
+  box-shadow: var(--shadow-card);
+}
+
+.card--default:hover {
+  box-shadow: var(--shadow-card-hover);
+}
+
+/* Variant: Outlined */
+.card--outlined {
+  border: var(--border-width-default) solid var(--color-border-default);
+  box-shadow: none;
+}
+
+.card--outlined:hover {
+  border-color: var(--color-neutral-400);
+}
+
+/* Variant: Elevated */
+.card--elevated {
+  border: none;
+  box-shadow: var(--shadow-lg);
+}
+
+.card--elevated:hover {
+  box-shadow: var(--shadow-xl);
+}
+
+.card__header {
+  padding: var(--spacing-card-padding);
+  border-bottom: var(--border-width-default) solid var(--color-border-default);
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-lg);
+  color: var(--color-text-primary);
+}
+
+.card__body {
+  padding: var(--spacing-card-padding);
+  color: var(--color-text-primary);
+  flex: 1;
+}
+
+.card__footer {
+  padding: var(--spacing-card-padding);
+  border-top: var(--border-width-default) solid var(--color-border-default);
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+}
+
+/* Compact padding for smaller cards */
+.card--compact .card__header,
+.card--compact .card__body,
+.card--compact .card__footer {
+  padding: var(--spacing-card-padding-sm);
+}
+
+/* Large padding for larger cards */
+.card--large .card__header,
+.card--large .card__body,
+.card--large .card__footer {
+  padding: var(--spacing-card-padding-lg);
+}

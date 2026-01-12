@@ -1,0 +1,95 @@
+@import '../../tokens/index.css';
+
+.spinner {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary-600);
+}
+
+.spinner__svg {
+  display: block;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner__circle {
+  opacity: 0.75;
+}
+
+/* Size Variants */
+.spinner--sm {
+  width: 16px;
+  height: 16px;
+}
+
+.spinner--sm .spinner__svg {
+  width: 16px;
+  height: 16px;
+}
+
+.spinner--md {
+  width: 24px;
+  height: 24px;
+}
+
+.spinner--md .spinner__svg {
+  width: 24px;
+  height: 24px;
+}
+
+.spinner--lg {
+  width: 32px;
+  height: 32px;
+}
+
+.spinner--lg .spinner__svg {
+  width: 32px;
+  height: 32px;
+}
+
+/* Tone Variants */
+.spinner--primary {
+  color: var(--color-primary-600);
+}
+
+.spinner--secondary {
+  color: var(--color-secondary-600);
+}
+
+.spinner--neutral {
+  color: var(--color-neutral-600);
+}
+
+.spinner--success {
+  color: var(--color-success-600);
+}
+
+.spinner--error {
+  color: var(--color-error-600);
+}
+
+.spinner--warning {
+  color: var(--color-warning-600);
+}
+
+/* Screen reader only text */
+.spinner__sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}

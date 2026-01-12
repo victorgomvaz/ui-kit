@@ -1,0 +1,43 @@
+:root {
+  /* Base spacing unit: 4px */
+  --spacing-0: 0;
+  --spacing-1: 0.25rem; /* 4px */
+  --spacing-2: 0.5rem;  /* 8px */
+  --spacing-3: 0.75rem; /* 12px */
+  --spacing-4: 1rem;    /* 16px */
+  --spacing-5: 1.25rem; /* 20px */
+  --spacing-6: 1.5rem;  /* 24px */
+  --spacing-8: 2rem;    /* 32px */
+  --spacing-10: 2.5rem; /* 40px */
+  --spacing-12: 3rem;   /* 48px */
+  --spacing-16: 4rem;   /* 64px */
+  --spacing-20: 5rem;   /* 80px */
+  --spacing-24: 6rem;   /* 96px */
+
+  /* Component-specific spacing */
+  --spacing-button-padding-x-sm: var(--spacing-3);
+  --spacing-button-padding-x-md: var(--spacing-4);
+  --spacing-button-padding-x-lg: var(--spacing-6);
+  --spacing-button-padding-y-sm: var(--spacing-2);
+  --spacing-button-padding-y-md: var(--spacing-2);
+  --spacing-button-padding-y-lg: var(--spacing-3);
+
+  --spacing-input-padding-x: var(--spacing-3);
+  --spacing-input-padding-y: var(--spacing-2);
+
+  --spacing-card-padding: var(--spacing-6);
+  --spacing-card-padding-sm: var(--spacing-4);
+  --spacing-card-padding-lg: var(--spacing-8);
+
+  --spacing-modal-padding: var(--spacing-6);
+  --spacing-modal-header-gap: var(--spacing-4);
+  --spacing-modal-footer-gap: var(--spacing-4);
+
+  /* Gaps */
+  --gap-1: var(--spacing-1);
+  --gap-2: var(--spacing-2);
+  --gap-3: var(--spacing-3);
+  --gap-4: var(--spacing-4);
+  --gap-6: var(--spacing-6);
+  --gap-8: var(--spacing-8);
+}

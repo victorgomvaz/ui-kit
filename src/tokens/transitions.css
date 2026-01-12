@@ -1,0 +1,33 @@
+:root {
+  /* Transition Durations */
+  --transition-duration-fast: 150ms;
+  --transition-duration-base: 200ms;
+  --transition-duration-slow: 300ms;
+  --transition-duration-slower: 500ms;
+
+  /* Transition Easing */
+  --easing-linear: linear;
+  --easing-ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --easing-ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --easing-ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Standard Transitions */
+  --transition-base: all var(--transition-duration-base) var(--easing-ease-in-out);
+  --transition-fast: all var(--transition-duration-fast) var(--easing-ease-in-out);
+  --transition-slow: all var(--transition-duration-slow) var(--easing-ease-in-out);
+
+  /* Component-specific transitions */
+  --transition-button: background-color var(--transition-duration-fast) var(--easing-ease-out),
+    border-color var(--transition-duration-fast) var(--easing-ease-out),
+    color var(--transition-duration-fast) var(--easing-ease-out),
+    box-shadow var(--transition-duration-fast) var(--easing-ease-out);
+
+  --transition-input: border-color var(--transition-duration-base) var(--easing-ease-out),
+    box-shadow var(--transition-duration-base) var(--easing-ease-out);
+
+  --transition-modal: opacity var(--transition-duration-slow) var(--easing-ease-out),
+    transform var(--transition-duration-slow) var(--easing-ease-out);
+
+  --transition-tooltip: opacity var(--transition-duration-fast) var(--easing-ease-out),
+    transform var(--transition-duration-fast) var(--easing-ease-out);
+}

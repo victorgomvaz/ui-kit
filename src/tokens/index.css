@@ -1,0 +1,35 @@
+/* Design Tokens - Main Entry Point */
+
+/* Import Inter font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@import './colors.css';
+@import './spacing.css';
+@import './typography.css';
+@import './shadows.css';
+@import './borders.css';
+@import './transitions.css';
+
+/* Base Reset & Global Styles */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: var(--font-family-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  /* Z-index scale */
+  --z-index-base: 0;
+  --z-index-dropdown: 1000;
+  --z-index-sticky: 1020;
+  --z-index-fixed: 1030;
+  --z-index-modal-backdrop: 1040;
+  --z-index-modal: 1050;
+  --z-index-popover: 1060;
+  --z-index-tooltip: 1070;
+}
